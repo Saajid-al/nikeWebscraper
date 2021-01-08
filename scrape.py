@@ -1,6 +1,12 @@
 from bs4 import BeautifulSoup
 import requests 
+import csv
+
 link = input("Please enter a link")
+
+while ("https://www.nike.com") not in link:
+    print("Please Enter a valid Nike link.")
+    link = input("Please enter a link")
 source = requests.get(link).text
 soup = BeautifulSoup(source, "lxml")
 #"https://www.nike.com/ca/w/womens-running-shoes-37v7jz5e1x6zy7ok"
